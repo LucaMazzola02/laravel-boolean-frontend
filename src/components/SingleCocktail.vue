@@ -3,15 +3,15 @@
         <div class="card-body">
             <img :src="cocktail.image" alt="" style="height: 20rem;"/> 
             <div class="card-img-top"  >
-                <h4 class="font-size mt-3" :style="'color:' + cocktail.category.color + ';'">
+                <!-- <h4 class="font-size mt-3">
                     <strong> Category:</strong> <span>{{ cocktail.category.name }}</span>
-                </h4>
+                </h4> -->
                 <p>  <strong> ID : </strong> <span class="font-size "> {{ cocktail.id }}</span></p>
                 <p> <strong> Cocktail name's:</strong> <span class="font-size ">{{ cocktail.name}}</span></p>
                 <p><strong> Slug :</strong> <span class="font-size">{{ cocktail.slug}}</span></p> 
-                <p class="font-size" v-for=" ingredient in cocktail.ingredients" :key="ingredient" :style="'color:' + ingredient.color + ';'">
-                    <strong> Ingredients : </strong><span>{{ingredient.name }}</span>
-                </p>
+                <!-- <p class="font-size" v-for=" ingredient in cocktail.ingredients" :key="ingredient">
+                    <strong> Ingredients : </strong> <span>{{ingredient.name }}</span>
+                </p> -->
                 <p> <strong>Garnish: </strong>  <span class="font-size ">{{ cocktail.garnish }} </span></p>
             </div>
         </div>
@@ -37,6 +37,11 @@ div.cocktail-card{
             background-color: rgb(189, 197, 211);
             color: black;
             margin-bottom: 2rem;
+            
+            &:hover{
+                transform: scale(1.05);
+                transition: all .5s cubic-bezier(.215, .61, .355, 1);
+            }
            
             
 

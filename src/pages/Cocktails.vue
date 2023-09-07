@@ -1,5 +1,7 @@
 <template>
-    
+    <div class="text-center mb-4">
+        <h1>Cocktails List:</h1>
+    </div>
     <div class="cocktail-container">
         <SingleCocktail v-for="cocktail in cocktails" :key="cocktail" :cocktail= "cocktail"  
         @click="$router.push({ name: 'cocktails.show', params: { slug: cocktail.slug} })" />
